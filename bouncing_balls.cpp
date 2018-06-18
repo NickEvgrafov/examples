@@ -10,7 +10,7 @@
 #include <cmath>
 #include <iostream>
 
-int num_watches(float h, float bounce, float window)
+/*int num_watches(float h, float bounce, float window)
 {
     if ((h <= 0) || (bounce < 0 || bounce > 1) || (window >= h))
         return -1;
@@ -28,6 +28,17 @@ int num_watches(float h, float bounce, float window)
     while (nexth > double(window));
 
     return result;
+}*/
+
+int num_watches(float h, float bounce, float window)
+{
+    if ((h <= 0) || (bounce < 0 || bounce > 1) || (window >= h))
+        return -1;
+
+    double ratio = double(window) / double(h);
+    double power = log(ratio) / log(bounce);
+
+    return int(floor(power)) * 2  + 1;
 }
 
 int main()
