@@ -1,4 +1,5 @@
 cmake_minimum_required (VERSION 3.0)
 project (examples)
-add_executable(bouncing_balls bouncing_balls.cpp)
+#add_executable(bouncing_balls bouncing_balls.cpp)
 add_executable(simple_encryption_1 simple_encryption_1.cpp)
+add_executable(form_the_minimum form_the_minimum.cpp)
