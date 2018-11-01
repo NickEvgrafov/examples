@@ -71,6 +71,9 @@ void dotest(std::vector<std::string> arr, int k, std::string expected)
 
 int main()
 {
+    std::wstring str = L"abcdefgh";
+    const char* pointer = reinterpret_cast<const char*>(str.c_str());
+
     std::vector<std::string> arr = { "aaa" };
     dotest(arr, 1, "aaa");
 
